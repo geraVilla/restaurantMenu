@@ -1,0 +1,376 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(10, 10, 10, 0.1);
+    
+}
+
+.introImage{
+    display: none;
+    opacity: 0;
+}
+.introImageAnimate{
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes fade {
+    0%{display: none; opacity: 0;}
+    100%{display: block; opacity: 1;}
+}
+.fadeOutImage{
+    animation-name: fadeOut;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes fadeOut {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+#burritoIcon{
+    height: 50px;
+    width: 50px;
+    animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-15px);}
+    100%{transform: translateY(0px);}
+}
+#quesadillaIcon{
+    height: 50px;
+    width: 50px;
+    animation: float 2s ease-in-out infinite;
+}
+#tacoIcon{
+    height: 50px;
+    width: 50px;
+    animation: float 2s ease-in-out infinite;
+}
+
+h1{
+    font-family: 'Concert One', cursive;
+    
+}
+.foodTitle h1{
+    font-size: 38px;
+    margin-right: 5px;
+}
+
+h3{
+    font-family: 'Concert One', cursive;
+    font-size: 22px;
+
+}
+
+
+.price{
+    font-family: 'Concert One', cursive;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+
+
+#sunImage{
+    position: absolute;
+    top: 50%;
+}
+
+
+.sideBar{
+    position: fixed;
+    /*top: 0;*/
+    /*height: 12%;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    height: 100%;
+    width: 0%;
+    background-color: rgb(23, 23, 23);
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.firstAnimation{
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes moveLeft {
+    0%{height: 100%; width: 0;}
+    100%{height: 100%; width: 100%; top: 0;}
+}
+
+.secondAnimation{
+    animation-name: goUp;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+}
+@keyframes goUp {
+    0%{height: 100%; width: 100%;}
+    100%{height: 12%; 
+        width: 100%; 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+}
+
+
+
+.socialIcons{
+    display: none;
+    opacity: 0;
+    width: 15%;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;*/
+}
+.revealSocialIcons{
+    opacity: 0;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: fade 1s ease forwards;
+}
+#instaIcon{
+    height: 35px;
+    width: 35px;
+}
+#tiktokIcon{
+    height: 35px;
+    width: 35px;
+}
+#facebookIcon{
+    height: 35px;
+    width: 35px;
+}
+
+.breakfastMenu{
+    /*display: none;*/
+    position: absolute;
+    top: 12%;
+    
+    /*height: 100%;*/
+    width: 100%;
+    /*background-color: rgb(222, 217, 222);*/
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    background-color: rgba(10, 10, 10, 0.1);
+    /*background-color: rgb(2224, 197, 182);*/
+    /*background-image: linear-gradient(to right, rgb(65, 65, 65) , rgb(0, 0, 0));*/
+    
+}
+
+.titleAndImage{
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s ease;
+}
+.titleContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.breakfastTitle{
+    font-size: 60px;
+    font-family: 'Concert One', cursive;
+}
+.imageContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.allMenus{
+    display: none;
+    opacity: 0;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;*/
+    width: 50%;
+    
+    
+}
+.revealAllMenus{
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    animation: fade 1s ease forwards;
+    
+}
+
+.breakfast h1{
+    color: rgb(220,220,220);
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Concert One', cursive;
+    cursor: pointer;
+    transition: font-size 0.5s ease;
+}
+.breakfast h1:hover{
+    font-size: 38px;
+}
+
+.lunch h1{
+    color: rgb(220, 220, 220);
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Concert One', cursive;
+    cursor: pointer;
+    transition: font-size 0.5s ease;
+}
+.lunch h1:hover{
+    font-size: 38px;
+}
+.dinner h1{
+    color: rgb(220, 220, 220);
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Concert One', cursive;
+    cursor: pointer;
+    transition: font-size 0.5s ease;
+}
+.dinner h1:hover{
+    font-size: 38px;
+}
+
+.restaurantTitle{
+    opacity: 0;
+    color: rgb(204, 202, 204);
+    /*font-family: 'Roboto Slab', serif;*/
+    font-family: 'Concert One', cursive;
+    margin-left: 20px;
+}
+.fadeInRestaurantTitle{
+    animation-name: fadeUp;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeUp {
+    /*0%{opacity: 0; transform: translateY(20);}
+    100%{opacity: 1; transform: translateY(-30px);}*/
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.removeTranslation{
+    animation-name: removeTranslationOne;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes removeTranslationOne {
+    0%{transform: translateY(-30px)}
+    100%{transform: translateY(0)}
+}
+.circleImage{
+    animation: rotate 15s linear infinite;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+.firstSection{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.firstPart{
+    opacity: 0;
+    width: 33.33%;
+    transform: translateY(-40%);
+    transition: opacity 1s ease;
+    /*background-color: aqua;*/
+}
+.secondPart{
+    opacity: 0;
+    width: 33.33%;
+    transition: opacity 1s ease;
+    /*background-color: blueviolet;*/
+}
+.thridPart{
+    opacity: 0;
+    width: 33.33%;
+    transform: translateY(-40%);
+    transition: opacity 1s ease;
+    /*background-color: aquamarine;*/
+}
+.foodTitle{
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+}
+
+.foodNameAndPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: red;*/
+    
+    
+}
+.foodInfo{
+    /*background-color: blue;*/
+    margin-top: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+}
+
+.maxContainerOfFirstPart{
+    width: 70%;
+    margin-left: 20px;
+}
+
+.maxContainerOfSecondPart{
+    width: 70%;
+    margin-left: 20px;
+}
+
+.maxContainerOfThirdPart{
+    width: 70%;
+    margin-left: 20px;
+
+}
+
+.foodItem{
+    /*background-color: aqua;*/
+    
+}
